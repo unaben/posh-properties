@@ -1,0 +1,53 @@
+.card {
+  border: var(--border-width-thick) solid var(--color-border);
+  background-color: var(--color-surface);
+  position: relative;
+}
+
+.link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.bookmark {
+  position: absolute;
+  top: 0;
+  right: var(--space-2);
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.saved { color: var(--color-bookmark-saved); }
+.unsaved { color: var(--color-bookmark-unsaved); }
+
+.price {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: var(--space-1) var(--space-2);
+  border-top: var(--border-width-thin) solid var(--color-border);
+  border-left: var(--border-width-thin) solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.body {
+  padding: var(--space-2) var(--space-3);
+}
+
+.address {
+  margin: 0;
+}

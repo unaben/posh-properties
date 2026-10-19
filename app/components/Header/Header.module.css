@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .header { flex-direction: row; }
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-none);
+  font-weight: inherit;
+}
+
+.centered {
+   margin: 0 auto;
+}
+
