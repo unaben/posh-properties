@@ -23,5 +23,5 @@ export interface SafeImageProps {
 
 export interface PropertyImageDetailsProps {
   property: Property;
-  searchQuery: string; // search term to restore on "Back"
+  searchQuery: string;
 }

@@ -8,7 +8,6 @@ import styles from "./PropertyCard.module.css";
 
 function PropertyCard({ property, searchQuery }: PropertyCardProps) {
   const [isSaved, setIsSaved] = useState(false);
-  // Remember which URL failed (not just "failed") so changing the photo retries
   const [failedSrc, setFailedSrc] = useState<string | null>(null);
 
   const photoSrc = property.photo ? `${IMAGE_BASE_URL}${property.photo}` : null;
