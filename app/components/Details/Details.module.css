@@ -1,0 +1,173 @@
+.section {
+  width: 100%;
+  max-width: var(--details-max-width);
+  margin: var(--space-8) auto 0;
+}
+
+.tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.tab {
+  padding: var(--space-1) var(--space-3);
+  border: var(--border-width-thin) solid var(--color-border);
+  background-color: var(--color-surface);
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tabActive {
+  background-color: var(--color-surface-inverse);
+  color: var(--color-text-inverse);
+}
+
+.main {
+  position: relative;
+  aspect-ratio: var(--aspect-property-image);
+  background-color: var(--color-surface-muted);
+}
+
+.mainImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fallback {
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--aspect-property-image);
+  object-fit: cover;
+}
+
+.cover {
+  object-fit: cover;
+}
+.contain {
+  object-fit: contain;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  background-color: var(--color-surface-overlay);
+  font: inherit;
+  cursor: pointer;
+}
+.prev {
+  left: var(--space-2);
+}
+.next {
+  right: var(--space-2);
+}
+
+.counter {
+  position: absolute;
+  bottom: var(--space-2);
+  right: var(--space-2);
+  margin: 0;
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-surface-overlay);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.thumbs {
+  display: flex;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.thumbItem {
+  flex-shrink: 0;
+}
+
+.thumbButton {
+  display: block;
+  padding: 0;
+  border: var(--border-width-thick) solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+.thumbButtonActive {
+  border-color: var(--color-border-active);
+}
+
+.thumbImage {
+  display: block;
+  width: var(--thumb-width);
+  height: var(--thumb-height);
+  object-fit: cover;
+}
+
+.details {
+  margin-top: var(--space-4);
+}
+
+.address {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.price {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+.stats {
+  display: flex;
+  gap: var(--space-4);
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.pdfPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.pdfLabel {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+.pdfLink {
+  padding: var(--space-2) var(--space-4);
+  border: var(--border-width-thin) solid var(--color-border-strong);
+  background-color: var(--color-surface);
+  color: inherit;
+}
+
+.pdfThumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--thumb-width);
+  height: var(--thumb-height);
+  background-color: var(--color-surface-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
