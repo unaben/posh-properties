@@ -1,5 +1,6 @@
 import cn from "classnames";
 import { useMatch } from "react-router";
+import SearchBox from "../Searchbox/Searchbox";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -10,6 +11,8 @@ function Header() {
       <h1 className={cn(styles.title, { [styles.centered]: !isHome })}>
         Posh Properties
       </h1>
+
+      {isHome && <SearchBox />}
     </header>
   );
 }
