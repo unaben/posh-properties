@@ -13,13 +13,13 @@ export type PropertyType =
 export type Tenure = "Freehold" | "Leasehold";
 
 export interface PropertyAsset {
-  image: string; // path relative to the image base URL (can be a .pdf)
+  image: string; 
   description: string | null;
   category_id: number | null;
 }
 
 export interface PropertyFloorplan {
-  image: string; // path relative to the image base URL (can be a .pdf)
+  image: string; 
   description: string | null;
 }
 
@@ -42,14 +42,14 @@ export interface Agency {
   external_domain: string | null;
   url_label: string;
   resource_uri: string;
-  member_subscription_level?: number; // missing on some agencies
+  member_subscription_level?: number; 
 }
 
 export interface Property {
   property_id: number;
   vox_number: string | null;
   administration_fee: number | null;
-  investment_yield?: number; // only present on some records
+  investment_yield?: number;
   isSaved: boolean;
   property_type: PropertyType;
   age: number;
@@ -77,13 +77,13 @@ export interface Property {
   bedrooms: number;
   bathrooms: number | null;
   reception_rooms: number | null;
-  price: string; // display string, e.g. "Guide price £5,000,000"
+  price: string; 
   price_value: number;
   pppw_price: number | null;
   currency_code: string | null;
   available_on: string | null;
   branch_id: number;
-  photos: string[]; // paths relative to the image base URL; can be empty
+  photos: string[]; 
   new_home: boolean | null;
   tags: string[];
   acreage: number | null;
@@ -100,8 +100,8 @@ export interface Property {
   features: string[];
   comments: string | null;
   resource_uri: string;
-  created_at: string; // ISO 8601
-  create_date: string; // ISO 8601
+  created_at: string;
+  create_date: string; 
   hidden: boolean | null;
   international: boolean | null;
   associated_branch_ids: number[] | null;
@@ -117,7 +117,7 @@ export interface Property {
 export interface PropertySearch {
   saved: boolean;
   id: number | null;
-  run_at: string; // ISO 8601
+  run_at: string; 
   query: string | null;
   portal_id: number;
   hidden: boolean;
@@ -149,12 +149,9 @@ export interface PropertiesResponse {
     time_taken: number;
   };
 }
-
-// The slimmed-down shape the grid needs, so the home loader doesn't ship
-// every field of every property to the browser.
 export interface PropertySummary {
   property_id: number;
   display_address: string;
   price: string;
-  photo: string | null; // first photo path, relative to the image base URL
+  photo: string | null; 
 }
