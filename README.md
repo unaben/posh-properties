@@ -1,5 +1,7 @@
 # Posh Properties
 
+Live: https://posh-properties.vercel.app/
+
 A small property listings app. Browse a grid of high-end properties, search them, and open any listing to flick through its photos, floorplans and EPC graphs.
 
 Built with React Router v7 (framework mode), React 19 and TypeScript. Styling is plain CSS modules on top of a small set of design tokens, no UI library.
