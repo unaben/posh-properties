@@ -1,7 +1,7 @@
 import { useLocation } from "react-router";
 import PropertyImageDetails from "../components/Details/Details";
 import { getProperty } from "../lib/properties.server";
-import type { Route } from "./+types/property";
+import type { Route } from "./+types/property-details";
 
 export async function loader({ params, request }: Route.LoaderArgs) {
   const property = await getProperty(request, Number(params.propertyId));
@@ -23,15 +23,14 @@ export function meta({ data }: Route.MetaArgs) {
 
 export default function PropertyRoute({ loaderData }: Route.ComponentProps) {
   const { property } = loaderData;
-  // The card passes the active search along so "Back" restores it
   const { state } = useLocation();
-  const q: string = state?.q ?? "";
+  const query: string = state?.q ?? "";
 
   return (
     <PropertyImageDetails
-      key={property.property_id} // reset gallery state per property
+      key={property.property_id}
       property={property}
-      q={q}
+      searchQuery={query}
     />
   );
 }
